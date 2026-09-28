@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-mint-wash: #f2ffe3;
+  --color-vivid-lime: #a3fda7;
+  --color-forest-depth: #0d5b3b;
+  --color-pine-shadow: #083a26;
+  --color-spring-gradient-start: #82ff87;
+  --color-citrus-gradient-end: #deff82;
+  --color-charcoal-ink: #000000;
+  --color-cream-paper: #ffffff;
+  --color-stone-charcoal: #2d3637;
+  --color-warm-mist: #e9e7e2;
+  --color-silver-border: #cccccc;
+  --color-sage-gray: #838676;
+  --color-eucalyptus: #9cb0a8;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-mint-wash);
+    color: var(--color-stone-charcoal);
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Editorial Gradient Text Utility */
+.editorial-gradient-text {
+  background: linear-gradient(135deg, #0d5b3b 0%, #246B4B 40%, #083a26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lime-citrus-gradient-text {
+  background: linear-gradient(120deg, #82ff87 0%, #a3fda7 50%, #deff82 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f2ffe3;
+}
+::-webkit-scrollbar-thumb {
+  background: #9cb0a8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d5b3b;
+}
+
+/* Print styles for Lot Passport */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+}
